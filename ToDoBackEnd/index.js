@@ -21,8 +21,9 @@ ConnectDB();
 
 
 
-app.get('/get', (req, res) => {
-    TodoModel.find()
+app.get('/get/:id', (req, res) => {
+    const { id } = req.params;
+    TodoModel.findByIdAndGet({ _id: id }, { done: true })
         .then(result => res.json(result))
         .catch(err => res.json(err))
 })
