@@ -13,8 +13,8 @@ import { MdDelete } from "react-icons/md"; //delete
 
 export default function Home() {
     const [todos, setTodos] = useState([])
-    useEffect(() => {
-        axios.get('https://to-do-list-app-1-awv3.onrender.com/get')
+    useEffect((id) => {
+        axios.get('https://to-do-list-app0.onrender.com/get/' + id)
             .then(result => setTodos(result.data))
             .catch(err => console.log(err))
 
