@@ -7,7 +7,19 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+const ConnectDB = async () => {
+    try {
+        const connect = await mongoose.connect('mongodb+srv://Irfan:zFIOvmhcnPqVk3yo@cluster0.xrr91kj.mongodb.net/');
+        console.log("Connected to mongodb successfully");
+    } catch (e) {
+        console.log(e);
+        process.exit(1);
+    }
+}
+ConnectDB();
+
+
+
 
 app.get('/get', (req, res) => {
     TodoModel.find()
