@@ -14,14 +14,14 @@ import { MdDelete } from "react-icons/md"; //delete
 export default function Home() {
     const [todos, setTodos] = useState([])
     useEffect(() => {
-        axios.get('https://to-do-list-app-2-ecip.onrender.com/get')
+        axios.get('https://to-do-list-app0.onrender.com/get')
             .then(result => setTodos(result.data))
             .catch(err => console.log(err))
 
     }, [todos])
 
     const handleEdit = (id) => {
-        axios.put('https://to-do-list-app-2-ecip.onrender.com/update/' + id)
+        axios.put('https://to-do-list-app0.onrender.com/update/' + id)
             .then(result => {
                 window.location.reload()
             })
@@ -29,7 +29,7 @@ export default function Home() {
     }
 
     const handleDelete = (id) => {
-        axios.delete('https://to-do-list-app-2-ecip.onrender.com/delete/' + id)
+        axios.delete('https://to-do-list-app0.onrender.com/delete/' + id)
             .then(result => {
                 window.location.reload()
             })
@@ -75,3 +75,4 @@ export default function Home() {
     )
 }
 
+// https://to-do-list-app-2-ecip.onrender.com
