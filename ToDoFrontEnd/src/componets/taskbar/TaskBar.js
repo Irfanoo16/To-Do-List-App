@@ -6,7 +6,7 @@ import './TaskBar.css';
 export default function TaskBar() {
     const [task, setTask] = useState()
     const handleAdd = () => {
-        axios.post('https://to-do-list-app0.onrender.com/add', { task: task })
+        axios.post('https://to-do-list-app-1-awv3.onrender.com/add', { task: task })
             .then(result => {
                 window.location.reload()
             })
