@@ -1,0 +1,13 @@
+.add {
+    box-shadow: rgba(0, 0, 0, 5) 0px 0px 2px 0px;
+    border-radius: .3rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    background: rgb(17, 200, 220);
+    transition: calc(.3s);
+    border: none;
+}
+
+.add:hover {
+    background: white;
+}

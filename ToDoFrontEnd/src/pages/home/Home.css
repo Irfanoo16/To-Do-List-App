@@ -1,0 +1,29 @@
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    width: 20%;
+    min-width: 17rem;
+    padding: .6rem .3rem;
+    margin-top: 1rem;
+    box-shadow: rgb(0, 0, 0, 5) 0px 0px 3px 0px;
+    border-radius: .3rem;
+    gap: .6rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: .6rem;
+}
+
+.checkbox p {
+    margin: 0;
+    overflow: hidden;
+}
+
+.line_through {
+    text-decoration: line-through;
+}
